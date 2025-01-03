@@ -1,4 +1,5 @@
-# AI 会议邀约助手
+
+# Timely.AI
 
 该项目是一个基于 OpenAI GPT-4 的 AI 助手，用于自动化会议邀约、时间协调、策略分析和通知功能。通过多轮对话、日历时间协调和逻辑分析，旨在提升会议安排的效率和准确性。
 
@@ -29,9 +30,8 @@
 首先，克隆该项目到本地：
 
 ```bash
-git clone https://github.com/your-repository/meeting-invite-assistant.git
-cd meeting-invite-assistant
-
+git clone https://jihulab.com/ai6444601/Timely.AI.git
+cd Timely.AI
 ```
 
 ### 2. 创建虚拟环境并安装依赖
@@ -45,7 +45,7 @@ source venv/bin/activate  # 对于 Windows 使用 `venv\Scripts\activate`
 安装依赖：
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ### 3. 配置 OpenAI API Key
@@ -70,7 +70,7 @@ pip install -r requirements.txt
 配置完毕后，可以通过以下命令启动 Flask 服务：
 
 ```bash
-python app.py
+python3 app.py
 ```
 
 默认情况下，Flask 会在本地的 5001 端口启动应用。你可以在浏览器中访问 `http://127.0.0.1:5001/` 来查看应用。
@@ -157,6 +157,28 @@ Content-Type: application/json
 ### 3. 系统支持多少个参与者？
 目前系统支持任意数量的参与者，协调时间时会逐一与参与者确认时间，并避免冲突。
 
+## 优化点
+
+为了进一步提升系统的功能和可用性，以下是一些待优化的关键点：
+
+### 1. **前端流程及页面的设计**
+   - 完善前端界面，提升用户体验，特别是会议安排、时间选择和确认流程的交互设计。
+   - 使用 React 或 Vue.js 等前端框架来提升页面的响应性和用户交互。
+
+### 2. **集成飞书、Google、企业微信等日历接口**
+   - 实现与飞书、Google Calendar、企业微信等日历平台的集成。
+   - 支持日历增删改查，自动同步会议时间并与参与者日历进行冲突检测。
+   - 提供方便的 API 或界面让用户能够快速选择与会时间，并自动更新日历。
+
+### 3. **对接 Chat_on_WeChat 开源项目**
+   - 将系统对接 `chat_on_wechat` 开源项目，以便在飞书、微信、企业微信、钉钉等IM中创建助手，直接通过微信与用户进行会议邀约、时间协调等。
+   - 支持通过微信实现邀请、确认和提醒等功能。
+
+### 4. **短信、电话拨打及对话内容**
+   - 增加短信和电话拨打功能，使系统能够自动向参会者发送会议提醒或变更通知。
+   - 利用 Twilio 或其他 API 进行电话呼叫和短信发送功能集成。
+   - 记录与参会者的通话内容，并将其同步到会议安排系统中。
+
 ## 贡献
 欢迎提交问题（Issues）和拉取请求（Pull Requests），我们非常欢迎任何关于改进系统的建议和贡献。
 
@@ -166,5 +188,3 @@ Content-Type: application/json
 ```
 
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
