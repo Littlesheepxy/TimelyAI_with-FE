@@ -1,0 +1,192 @@
+.meeting-invite-container {
+    padding: 24px;
+    background: #f0f2f5;
+    min-height: 100vh;
+}
+
+.main-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.header-actions {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.steps-container {
+    margin-bottom: 24px;
+}
+
+.step-content {
+    min-height: 300px;
+    margin-bottom: 24px;
+}
+
+.step-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 24px;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* 对话框相关样式 */
+.ant-modal-body {
+    padding: 0;
+}
+
+.chat-dialog-container {
+    margin: -24px;
+}
+
+.intervention-content {
+    padding: 16px;
+}
+
+.intervention-content h4 {
+    margin-bottom: 16px;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.coordination-log {
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.coordination-log.system {
+    background: #f5f5f5;
+    color: #666;
+}
+
+.coordination-log.success {
+    background: #f6ffed;
+    color: #52c41a;
+}
+
+.coordination-log.warning {
+    background: #fffbe6;
+    color: #faad14;
+}
+
+.coordination-log.error {
+    background: #fff2f0;
+    color: #ff4d4f;
+}
+
+.channels-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.channel-item {
+    transition: all 0.3s;
+}
+
+.channel-item.dragging {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.channel-card {
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s;
+}
+
+.channel-card.enabled {
+    border-color: #1890ff;
+}
+
+.channel-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.drag-handle {
+    cursor: move;
+    color: #999;
+    padding: 4px;
+}
+
+.drag-handle:hover {
+    color: #1890ff;
+}
+
+.channel-info {
+    flex: 1;
+}
+
+.channel-actions {
+    margin-left: auto;
+}
+
+.channel-settings {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px dashed #f0f0f0;
+}
+
+.invite-progress {
+    padding: 24px;
+}
+
+.process-options {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.processing-status {
+    margin-top: 24px;
+    padding: 16px;
+    background: #fafafa;
+    border-radius: 4px;
+}
+
+.log-item {
+    margin-bottom: 16px;
+}
+
+.log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.log-title {
+    font-weight: 500;
+}
+
+.log-time {
+    color: #999;
+    font-size: 12px;
+}
+
+.log-content {
+    color: #666;
+    font-size: 14px;
+}
+
+.manual-controls {
+    margin-top: 24px;
+}
+
+/* 添加动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.processing-status {
+    animation: fadeIn 0.3s ease-out;
+} 

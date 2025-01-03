@@ -1,0 +1,41 @@
+/* 这是一个示例，可以根据需要添加全局样式 */
+body[data-theme='light'] {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --header-background: #001529;
+    --button-background: #007bff;
+    --button-text-color: #ffffff;
+}
+
+body[data-theme='dark'] {
+    --background-color: #1e1e1e;
+    --text-color: #ffffff;
+    --header-background: #333333;
+    --button-background: #444444;
+    --button-text-color: #ffffff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.header {
+    background-color: var(--header-background);
+}
+
+button {
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+} 

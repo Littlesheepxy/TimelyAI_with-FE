@@ -1,0 +1,122 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+i18n
+  .use(initReactI18next)
+  .init({
+    resources: {
+      en: {
+        translation: {
+          "settings": "Settings",
+          "personalInfo": "Personal Information",
+          "accountSecurity": "Account Security",
+          "notificationSettings": "Notification Settings",
+          "privacySettings": "Privacy Settings",
+          "appSettings": "App Settings",
+          "name": "Name",
+          "email": "Email",
+          "save": "Save",
+          "changePassword": "Change Password",
+          "twoFactorAuth": "Two-Factor Authentication",
+          "receiveNotifications": "Receive Notifications",
+          "notificationFrequency": "Notification Frequency",
+          "dataSharing": "Data Sharing",
+          "theme": "Theme",
+          "language": "Language",
+          "light": "Light",
+          "dark": "Dark",
+          "chinese": "Chinese",
+          "english": "English",
+          "meetingWithTeam": "Meeting with Team",
+          "editInvite": "Edit invite with id: {{id}}",
+          "scheduledInvites": "Scheduled Invites",
+          "edit": "Edit",
+          "at": "at",
+          "createNewInvite": "Create New Invite",
+          "scheduleOverview": "Schedule Overview",
+          "meetingReminder": "Meeting Reminder",
+          "meetingTodayAt": "Meeting today at {{time}}",
+          "notifications": "Notifications",
+          "confirmParticipants": "Confirm Participants",
+          "selectChannels": "Select Channels",
+          "confirmTime": "Confirm Time",
+          "conductInvite": "Conduct Invite",
+          "inviteComplete": "Invite Complete",
+          "nextStep": "Next Step",
+          "cancel": "Cancel",
+          "manualIntervention": "Manual Intervention",
+          "issueDetails": "Issue Details: All channels failed to reach, please intervene manually.",
+          "solutionOptions": "Solution Options:",
+          "retry": "Retry",
+          "alternativeSolution": "Alternative Solution",
+          "manualEdit": "Manual Edit",
+          "aiInterventionStrategy": "AI Intervention Strategy",
+          "aiAnalyzing": "AI is analyzing the best strategy to ensure the invite is successful...",
+          "strategySuggestions": "Strategy Suggestions:",
+          "tryAlternativeChannels": "Try sending through alternative channels",
+          "adjustSendTime": "Adjust send time to improve response rate",
+          "optimizeCommunication": "Optimize communication method based on historical data"
+        }
+      },
+      zh: {
+        translation: {
+          "settings": "设置",
+          "personalInfo": "个人信息",
+          "accountSecurity": "账户安全",
+          "notificationSettings": "通知设置",
+          "privacySettings": "隐私设置",
+          "appSettings": "应用设置",
+          "name": "姓名",
+          "email": "电子邮件",
+          "save": "保存",
+          "changePassword": "更改密码",
+          "twoFactorAuth": "双因素认证",
+          "receiveNotifications": "接收通知",
+          "notificationFrequency": "通知频率",
+          "dataSharing": "数据共享",
+          "theme": "主题",
+          "language": "语言",
+          "light": "浅色",
+          "dark": "深色",
+          "chinese": "中文",
+          "english": "英语",
+          "meetingWithTeam": "与团队会议",
+          "editInvite": "编辑邀约，ID: {{id}}",
+          "scheduledInvites": "已安排的邀约",
+          "edit": "编辑",
+          "at": "在",
+          "createNewInvite": "创建新邀约",
+          "scheduleOverview": "日程概览",
+          "meetingReminder": "会议提醒",
+          "meetingTodayAt": "今天的会议在{{time}}",
+          "notifications": "通知",
+          "confirmParticipants": "确认参与者",
+          "selectChannels": "选择渠道",
+          "confirmTime": "确认时间",
+          "conductInvite": "进行邀约",
+          "inviteComplete": "邀约完成",
+          "nextStep": "下一步",
+          "cancel": "取消",
+          "manualIntervention": "人工接管",
+          "issueDetails": "问题详情：所有渠道未能成功触达，请人工干预。",
+          "solutionOptions": "解决选项：",
+          "retry": "重试",
+          "alternativeSolution": "替代方案",
+          "manualEdit": "人工编辑",
+          "aiInterventionStrategy": "AI托管策略",
+          "aiAnalyzing": "AI正在分析最佳策略以确保邀约成功...",
+          "strategySuggestions": "策略建议：",
+          "tryAlternativeChannels": "尝试通过备用渠道发送",
+          "adjustSendTime": "调整发送时间以提高响应率",
+          "optimizeCommunication": "根据历史数据优化沟通方式"
+        }
+      }
+    },
+    lng: "zh", // 默认语言
+    fallbackLng: "zh",
+    interpolation: {
+      escapeValue: false
+    }
+  });
+
+export default i18n; 

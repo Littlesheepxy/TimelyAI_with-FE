@@ -1,0 +1,65 @@
+2025-01-02 18:30:18,907 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-01-02 18:30:18,907 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-02 18:30:18,908 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 18:30:19,115 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 18:30:19,123 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 18:30:26,660 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 18:30:26] "GET / HTTP/1.1" 200 -
+2025-01-02 18:30:27,705 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 18:30:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-02 18:30:33,697 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 18:30:33] "[33mPOST /api/schedule HTTP/1.1[0m" 404 -
+2025-01-02 18:31:21,338 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 18:31:21] "GET / HTTP/1.1" 200 -
+2025-01-02 18:31:27,434 - __main__ - ERROR - 处理请求失败: 'DialogueAgent' object has no attribute 'start_dialogue'
+2025-01-02 18:31:27,435 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 18:31:27] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2025-01-02 18:32:09,079 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/app.py', reloading
+2025-01-02 18:32:09,211 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 18:32:09,630 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 18:32:09,635 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 18:32:11,106 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 18:32:11] "GET / HTTP/1.1" 200 -
+2025-01-02 18:32:14,164 - __main__ - INFO - 收到请求 - 类型: user_initiated, 输入: 安排会议
+2025-01-02 18:32:14,164 - __main__ - INFO - 开始新对话
+2025-01-02 18:32:14,164 - agents.对话助手 - INFO - 添加对话历史 - user: 安排会议
+2025-01-02 18:32:18,201 - agents.对话助手 - INFO - 添加对话历史 - assistant: 当然可以，我需要收集一些信息才能安排会议。让我们开始吧。首先，请您告诉我希望何时进行这次会议？
+2025-01-02 18:32:18,201 - agents.对话助手 - INFO - 用户输入: 安排会议
+2025-01-02 18:32:18,201 - agents.对话助手 - INFO - 助手回复: 当然可以，我需要收集一些信息才能安排会议。让我们开始吧。首先，请您告诉我希望何时进行这次会议？
+2025-01-02 18:32:18,202 - __main__ - INFO - 处理成功 - 响应: 当然可以，我需要收集一些信息才能安排会议。让我们开始吧。首先，请您告诉我希望何时进行这次会议？
+2025-01-02 18:32:18,202 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 18:32:18] "POST /chat HTTP/1.1" 200 -
+2025-01-02 18:32:28,248 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/agents.py', reloading
+2025-01-02 18:32:28,312 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 18:32:28,645 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 18:32:28,653 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 19:43:02,530 - werkzeug - INFO -  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+2025-01-02 19:43:02,530 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 19:43:02,803 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 19:43:02,811 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 19:46:08,432 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 19:46:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-02 19:49:03,461 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/node_modules/flatted/python/flatted.py', reloading
+2025-01-02 19:49:03,650 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 19:49:04,484 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 19:49:04,514 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 19:49:28,334 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 19:49:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-02 20:01:03,261 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 20:01:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-02 20:02:51,411 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 20:02:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-02 20:25:58,718 - agents.对话助手 - INFO - 添加对话历史 - user: 安排会议
+2025-01-02 20:26:01,540 - agents.对话助手 - INFO - 添加对话历史 - assistant: 当然可以。我需要知道一些具体的信息来安排会议。请问这次会议将在哪一天举行？
+2025-01-02 20:26:01,540 - agents.对话助手 - INFO - 用户输入: 安排会议
+2025-01-02 20:26:01,540 - agents.对话助手 - INFO - 助手回复: 当然可以。我需要知道一些具体的信息来安排会议。请问这次会议将在哪一天举行？
+2025-01-02 20:26:03,668 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 20:26:03] "POST /chat HTTP/1.1" 200 -
+2025-01-02 20:31:04,765 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 20:31:04] "[33mPOST /api/retry-channels HTTP/1.1[0m" 404 -
+2025-01-02 20:32:42,532 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 20:32:42] "[33mPOST /api/retry-channels HTTP/1.1[0m" 404 -
+2025-01-02 20:48:20,439 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/node_modules/flatted/python/test.py', reloading
+2025-01-02 20:48:22,347 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 20:48:27,834 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 20:48:28,164 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 20:51:46,201 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 20:51:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-02 20:53:13,702 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/node_modules/flatted/python/test.py', reloading
+2025-01-02 20:53:14,256 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 20:53:14,959 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 20:53:14,970 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 20:59:53,117 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/node_modules/flatted/python/flatted.py', reloading
+2025-01-02 20:59:54,702 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 20:59:59,339 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 20:59:59,846 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 21:12:14,653 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/node_modules/flatted/python/test.py', reloading
+2025-01-02 21:12:17,619 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 21:12:21,682 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 21:12:21,731 - werkzeug - INFO -  * Debugger PIN: 653-864-938

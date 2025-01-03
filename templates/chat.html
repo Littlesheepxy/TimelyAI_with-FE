@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>会议助手</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .chat-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .chat-messages {
+            height: 400px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .user-message {
+            background-color: #e3f2fd;
+            margin-left: 20%;
+        }
+        .assistant-message {
+            background-color: #f5f5f5;
+            margin-right: 20%;
+        }
+        .input-container {
+            display: flex;
+            gap: 10px;
+        }
+        input[type="text"] {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #2196f3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1976d2;
+        }
+        .debug-panel {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        .debug-messages {
+            height: 200px;
+            overflow-y: auto;
+            font-family: monospace;
+            background-color: #000;
+            color: #00ff00;
+            padding: 10px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>智能会议助手</h1>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="input-container">
+            <input type="text" id="messageInput" placeholder="输入您的消息...">
+            <button onclick="sendMessage()">发送</button>
+        </div>
+        <div class="debug-panel">
+            <h3>调试信息</h3>
+            <div class="debug-messages" id="debugMessages"></div>
+        </div>
+    </div>
+
+    <script>
+        const chatMessages = document.getElementById('chatMessages');
+        const messageInput = document.getElementById('messageInput');
+
+        // 添加消息到聊天界面
+        function addMessage(message, isUser) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user-message' : 'assistant-message'}`;
+            messageDiv.textContent = message;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // 添加调试信息显示函数
+        function addDebugMessage(message) {
+            const debugMessages = document.getElementById('debugMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.textContent = `[${new Date().toISOString()}] ${message}`;
+            debugMessages.appendChild(messageDiv);
+            debugMessages.scrollTop = debugMessages.scrollHeight;
+        }
+
+        // 发送消息
+        async function sendMessage() {
+            const message = messageInput.value.trim();
+            if (!message) return;
+
+            // 显示用户消息
+            addMessage(message, true);
+            messageInput.value = '';
+
+            try {
+                addDebugMessage(`发送请求: ${message}`);
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        message: message,
+                        type: 'user_initiated'
+                    })
+                });
+
+                const data = await response.json();
+                addDebugMessage(`收到响应: ${JSON.stringify(data)}`);
+                
+                // 显示助手回复
+                if (data.status === 'success') {
+                    addMessage(data.response, false);
+                } else {
+                    addMessage('抱歉，处理您的请求时出现错误。', false);
+                }
+            } catch (error) {
+                addDebugMessage(`错误: ${error.message}`);
+                console.error('Error:', error);
+                addMessage('抱歉，发生了错误。', false);
+            }
+        }
+
+        // 支持按回车发送消息
+        messageInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // 初始欢迎消息
+        addMessage('你好！我是你的智能会议助手。我可以帮你：\n1. 安排新的会议\n2. 修改已有会议\n3. 查询会议信息\n请告诉我你需要什么帮助？', false);
+    </script>
+</body>
+</html> 

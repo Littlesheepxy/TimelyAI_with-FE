@@ -1,0 +1,397 @@
+2025-01-02 17:24:12,235 - __main__ - INFO - 应用启动
+2025-01-02 17:24:12,262 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 17:24:12,273 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 17:24:16,672 - __main__ - INFO - 访问主页
+2025-01-02 17:24:16,689 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 17:24:16] "GET / HTTP/1.1" 200 -
+2025-01-02 17:24:23,381 - __main__ - INFO - 收到新请求 - 消息: 安排会议, 参与者: []
+2025-01-02 17:24:23,382 - agents.StrategyAgent - INFO - 开始执行策略 - 输入: 安排会议
+2025-01-02 17:24:27,083 - agents.StrategyAgent - INFO - 生成策略: 当然可以，我非常乐意帮助您安排会议。为了更好地服务和设置，方便告诉我以下信息吗？
+
+1. 您喜欢的会议日期和时间？
+2. 需要参加会议的人员？
+3. 会议在哪里举行，或者是线上会议吗？
+4. 会议的主题或议程？
+2025-01-02 17:24:27,084 - agents.StrategyAgent - INFO - 需要确认时间，开始收集确认
+2025-01-02 17:24:27,084 - agents.StrategyAgent - INFO - 收到确认结果: []
+2025-01-02 17:24:27,084 - agents.NotificationAgent - INFO - NotificationAgent 调用 OpenAI - 提示: 你是一个通知助手，负责通知参与者会议安排。 通知以下参与者会议安排：[]，详情：{'type': 'schedule', 'confirmations': []}
+2025-01-02 17:24:36,453 - agents.NotificationAgent - INFO - NotificationAgent 收到响应: 亲爱的参与者们，
+
+这是关于我们即将召开的会议的预定通知。目前，具体的参与者名单尚未确定，但我们将在尽快确立之后及时通知你们。
+
+会议类型：预定
+
+目前，会议的确认参与者尚未确定。请在收到会议具体时间，地点等信息后，尽快回复是否能参加会议，以便我们做进一步的安排。
+
+大家的积极参与对我们的会议计划有着重大的影响，敬请相关人员届时确认并出席。
+
+谢谢。
+
+最后，如果任何人需要更改或讨论会议安排，请随时与我联系。
+
+期待你们的积极回复并参与此次会议。
+
+祝好，
+通知助手
+2025-01-02 17:24:36,454 - __main__ - INFO - 处理完成 - 结果: 当然可以，我非常乐意帮助您安排会议。为了更好地服务和设置，方便告诉我以下信息吗？
+
+1. 您喜欢的会议日期和时间？
+2. 需要参加会议的人员？
+3. 会议在哪里举行，或者是线上会议吗？
+4. 会议的主题或议程？
+2025-01-02 17:24:36,454 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 17:24:36] "POST /api/schedule HTTP/1.1" 200 -
+2025-01-02 17:25:30,698 - __main__ - INFO - 访问主页
+2025-01-02 17:25:30,706 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 17:25:30] "GET / HTTP/1.1" 200 -
+2025-01-02 17:25:38,727 - __main__ - INFO - 收到新请求 - 消息: 安排会议, 参与者: []
+2025-01-02 17:25:38,727 - agents.StrategyAgent - INFO - 开始执行策略 - 输入: 安排会议
+2025-01-02 17:25:54,397 - agents.StrategyAgent - INFO - 生成策略: 当然可以，为了帮助您更好地安排这次会议，我需要一些额外的信息：
+
+1. 会议的日期和时间；
+2. 参会者是谁，需要我是发送邮件给他们吗？
+3. 会议的主题是什么？
+4. 会议将在哪里举行？在线还是实体会议室？
+5. 是否需要准备会议材料？
+2025-01-02 17:25:54,397 - __main__ - INFO - 处理完成 - 结果: 当然可以，为了帮助您更好地安排这次会议，我需要一些额外的信息：
+
+1. 会议的日期和时间；
+2. 参会者是谁，需要我是发送邮件给他们吗？
+3. 会议的主题是什么？
+4. 会议将在哪里举行？在线还是实体会议室？
+5. 是否需要准备会议材料？
+2025-01-02 17:25:54,398 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 17:25:54] "POST /api/schedule HTTP/1.1" 200 -
+2025-01-02 17:42:27,953 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/agents.py', reloading
+2025-01-02 17:42:28,439 - __main__ - INFO - 应用启动
+2025-01-02 17:42:28,459 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 17:42:28,466 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 17:42:33,844 - __main__ - INFO - 访问主页
+2025-01-02 17:42:33,858 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 17:42:33] "GET / HTTP/1.1" 200 -
+2025-01-02 17:44:56,022 - __main__ - INFO - 收到新请求 - 消息: 安排新回忆, 参与者: []
+2025-01-02 17:44:56,023 - agents.StrategyAgent - INFO - 开始执行策略 - 输入: 安排新回忆
+2025-01-02 17:45:00,273 - agents.StrategyAgent - INFO - 生成策略: 当然可以，我很高兴为您安排新的会议。但首先，我需要以下一些详细信息：
+1. 会议的日期和时间是什么？
+2. 会议的主题是什么？
+3. 需要邀请哪些参与者？
+4. 是否需要定制特殊的会议编排？
+
+请提供以上信息，我将根据您的指示安排会议。
+2025-01-02 17:45:00,273 - agents.StrategyAgent - INFO - 需要确认时间，开始收集确认
+2025-01-02 17:45:00,273 - agents.StrategyAgent - INFO - 收到确认结果: []
+2025-01-02 17:45:00,273 - agents.NotificationAgent - INFO - NotificationAgent 调用 OpenAI - 提示: 你是一个通知助手，负责通知参与者会议安排。 通知以下参与者会议安排：[]，详情：{'type': 'schedule', 'confirmations': []}
+2025-01-02 17:45:04,035 - agents.NotificationAgent - INFO - NotificationAgent 收到响应: 尊敬的参会人员，
+
+我是您的通知助手。我想通知您关于即将进行的会议的一些信息。
+
+会议形式: 计划的日程会议
+
+请注意，目前我们还未收到任何的确认信息。
+
+更多的细节将会在接下来的时间里更新。请保持关注。
+
+期待您的出席。
+
+谢谢,
+您的通知助手
+2025-01-02 17:45:04,036 - __main__ - INFO - 处理完成 - 结果: 当然可以，我很高兴为您安排新的会议。但首先，我需要以下一些详细信息：
+1. 会议的日期和时间是什么？
+2. 会议的主题是什么？
+3. 需要邀请哪些参与者？
+4. 是否需要定制特殊的会议编排？
+
+请提供以上信息，我将根据您的指示安排会议。
+2025-01-02 17:45:04,039 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 17:45:04] "POST /api/schedule HTTP/1.1" 200 -
+2025-01-02 17:45:47,842 - __main__ - INFO - 收到新请求 - 消息: 下周五三点，年终总结，张三和李四，没有特殊要求, 参与者: []
+2025-01-02 17:45:47,842 - agents.StrategyAgent - INFO - 开始执行策略 - 输入: 下周五三点，年终总结，张三和李四，没有特殊要求
+2025-01-02 17:45:50,994 - agents.StrategyAgent - ERROR - 策略执行出错: Error communicating with OpenAI: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+Traceback (most recent call last):
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 773, in urlopen
+    self._prepare_proxy(conn)
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 1042, in _prepare_proxy
+    conn.connect()
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/connection.py", line 741, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/connection.py", line 920, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/util/ssl_.py", line 460, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/util/ssl_.py", line 504, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 54] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 773, in urlopen
+    self._prepare_proxy(conn)
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 1042, in _prepare_proxy
+    conn.connect()
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/connection.py", line 741, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/connection.py", line 920, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/util/ssl_.py", line 460, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/util/ssl_.py", line 504, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/openai/api_requestor.py", line 596, in request_raw
+    result = _thread_context.session.request(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/requests/adapters.py", line 682, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/xiaoyang/Desktop/TimelyAI/agents.py", line 132, in execute_strategy
+    response = openai.ChatCompletion.create(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/openai/api_requestor.py", line 288, in request
+    result = self.request_raw(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/openai/api_requestor.py", line 609, in request_raw
+    raise error.APIConnectionError(
+openai.error.APIConnectionError: Error communicating with OpenAI: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+2025-01-02 17:45:51,005 - __main__ - INFO - 处理完成 - 结果: 策略执行出错
+2025-01-02 17:45:51,005 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 17:45:51] "POST /api/schedule HTTP/1.1" 200 -
+2025-01-02 17:46:54,395 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/agents.py', reloading
+2025-01-02 17:48:01,803 - __main__ - INFO - 应用启动
+2025-01-02 17:48:01,836 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+2025-01-02 17:48:01,836 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-02 17:48:01,837 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 17:48:02,038 - __main__ - INFO - 应用启动
+2025-01-02 17:48:02,055 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 17:48:02,066 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 17:48:06,743 - __main__ - INFO - 访问主页
+2025-01-02 17:48:06,747 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 17:48:06] "GET / HTTP/1.1" 200 -
+2025-01-02 17:48:14,408 - __main__ - INFO - 收到新请求 - 消息: 安排新回忆, 参与者: []
+2025-01-02 17:48:14,408 - agents.StrategyAgent - INFO - 开始执行策略 - 输入: 安排新回忆
+2025-01-02 17:48:17,669 - agents.StrategyAgent - ERROR - 策略执行出错: Error communicating with OpenAI: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+Traceback (most recent call last):
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 773, in urlopen
+    self._prepare_proxy(conn)
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 1042, in _prepare_proxy
+    conn.connect()
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/connection.py", line 741, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/connection.py", line 920, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/util/ssl_.py", line 460, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/util/ssl_.py", line 504, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 54] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 773, in urlopen
+    self._prepare_proxy(conn)
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 1042, in _prepare_proxy
+    conn.connect()
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/connection.py", line 741, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/connection.py", line 920, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/util/ssl_.py", line 460, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/urllib3/util/ssl_.py", line 504, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/openai/api_requestor.py", line 596, in request_raw
+    result = _thread_context.session.request(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/requests/adapters.py", line 682, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/xiaoyang/Desktop/TimelyAI/agents.py", line 152, in execute_strategy
+    response = openai.ChatCompletion.create(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/openai/api_requestor.py", line 288, in request
+    result = self.request_raw(
+  File "/Users/xiaoyang/Library/Python/3.9/lib/python/site-packages/openai/api_requestor.py", line 609, in request_raw
+    raise error.APIConnectionError(
+openai.error.APIConnectionError: Error communicating with OpenAI: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+2025-01-02 17:48:17,680 - __main__ - INFO - 处理完成 - 结果: 策略执行出错
+2025-01-02 17:48:17,681 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 17:48:17] "POST /api/schedule HTTP/1.1" 200 -
+2025-01-02 17:49:33,507 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/agents.py', reloading
+2025-01-02 17:49:33,570 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 17:49:33,962 - __main__ - INFO - 应用启动
+2025-01-02 17:49:33,983 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 17:49:33,988 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 17:51:04,794 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/agents.py', reloading
+2025-01-02 17:51:04,891 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 17:51:05,398 - __main__ - INFO - 应用启动
+2025-01-02 17:51:05,428 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 17:51:05,435 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 17:51:09,058 - __main__ - INFO - 访问主页
+2025-01-02 17:51:09,077 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 17:51:09] "GET / HTTP/1.1" 200 -
+2025-01-02 17:51:17,141 - __main__ - INFO - 收到新请求 - 消息: 安排会议, 参与者: []
+2025-01-02 17:51:17,141 - agents.StrategyAgent - INFO - 添加对话历史 - user: 安排会议
+2025-01-02 17:51:20,088 - agents.StrategyAgent - INFO - 添加对话历史 - assistant: 你希望何时举行会议？
+2025-01-02 17:51:20,089 - __main__ - INFO - 处理完成 - 结果: 你希望何时举行会议？
+2025-01-02 17:51:20,089 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 17:51:20] "POST /api/schedule HTTP/1.1" 200 -
+2025-01-02 17:51:29,793 - __main__ - INFO - 收到新请求 - 消息: 下周五两点吧, 参与者: []
+2025-01-02 17:51:29,793 - agents.StrategyAgent - INFO - 添加对话历史 - user: 下周五两点吧
+2025-01-02 17:51:33,969 - agents.StrategyAgent - INFO - 添加对话历史 - assistant: 请问会议的议题和参会人员是？
+2025-01-02 17:51:33,969 - __main__ - INFO - 处理完成 - 结果: 请问会议的议题和参会人员是？
+2025-01-02 17:51:33,969 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 17:51:33] "POST /api/schedule HTTP/1.1" 200 -
+2025-01-02 17:51:53,567 - __main__ - INFO - 收到新请求 - 消息: 年终总结，张三和李四, 参与者: []
+2025-01-02 17:51:53,568 - agents.StrategyAgent - INFO - 添加对话历史 - user: 年终总结，张三和李四
+2025-01-02 17:52:02,814 - agents.StrategyAgent - INFO - 对话总结: 好的，我会在下周五下午两点安排你们三人的年终总结会议。我先在你们的日历上标记一下，然后再发送一个正式的电子邮件通知。
+2025-01-02 17:52:02,815 - agents.StrategyAgent - ERROR - 策略执行出错: Expecting value: line 1 column 1 (char 0)
+2025-01-02 17:52:02,815 - __main__ - INFO - 处理完成 - 结果: 策略执行出错
+2025-01-02 17:52:02,815 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 17:52:02] "POST /api/schedule HTTP/1.1" 200 -
+2025-01-02 17:53:41,554 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/app.py', reloading
+2025-01-02 17:53:41,640 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 17:53:42,008 - __main__ - INFO - 应用启动
+2025-01-02 17:53:42,036 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 17:53:42,044 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 17:58:15,279 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/agents.py', reloading
+2025-01-02 17:58:15,362 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 17:58:15,677 - __main__ - INFO - 应用启动
+2025-01-02 17:58:15,699 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 17:58:15,721 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 17:58:19,928 - __main__ - INFO - 访问主页
+2025-01-02 17:58:19,940 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 17:58:19] "GET / HTTP/1.1" 200 -
+2025-01-02 17:58:24,692 - __main__ - INFO - 收到新请求 - 消息: 安排会议, 参与者: []
+2025-01-02 17:58:24,692 - agents.StrategyAgent - INFO - 添加对话历史 - user: 安排会议
+2025-01-02 17:58:24,692 - agents.StrategyAgent - INFO - 添加对话历史 - assistant: 请告诉我会议的时间、参与者和主题。
+2025-01-02 17:58:24,692 - __main__ - INFO - 处理完成 - 结果: 请告诉我会议的时间、参与者和主题。
+2025-01-02 17:58:24,693 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 17:58:24] "POST /api/schedule HTTP/1.1" 200 -
+2025-01-02 17:58:56,277 - __main__ - INFO - 收到新请求 - 消息: 下周三, 参与者: []
+2025-01-02 17:58:56,278 - agents.StrategyAgent - INFO - 添加对话历史 - user: 下周三
+2025-01-02 17:58:56,278 - agents.StrategyAgent - ERROR - 策略执行出错: 'StrategyAgent' object has no attribute 'check_missing_info'
+2025-01-02 17:58:56,278 - __main__ - INFO - 处理完成 - 结果: 策略执行出错
+2025-01-02 17:58:56,278 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 17:58:56] "POST /api/schedule HTTP/1.1" 200 -
+2025-01-02 18:00:23,661 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/agents.py', reloading
+2025-01-02 18:00:23,753 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 18:00:24,092 - __main__ - INFO - 应用启动
+2025-01-02 18:00:24,112 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 18:00:24,119 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 18:00:27,368 - __main__ - INFO - 访问主页
+2025-01-02 18:00:27,405 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 18:00:27] "GET / HTTP/1.1" 200 -
+2025-01-02 18:00:32,322 - __main__ - INFO - 收到新请求 - 消息: 安排会议, 参与者: []
+2025-01-02 18:00:32,323 - agents.StrategyAgent - INFO - 添加对话历史 - user: 安排会议
+2025-01-02 18:00:32,323 - agents.StrategyAgent - INFO - 当前对话阶段: initial
+2025-01-02 18:00:32,323 - agents.StrategyAgent - INFO - 添加对话历史 - assistant: 请告诉我会议的时间、参与者和主题。
+2025-01-02 18:00:32,323 - __main__ - INFO - 处理完成 - 结果: 请告诉我会议的时间、参与者和主题。
+2025-01-02 18:00:32,324 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 18:00:32] "POST /api/schedule HTTP/1.1" 200 -
+2025-01-02 18:00:35,876 - __main__ - INFO - 收到新请求 - 消息: 下周三, 参与者: []
+2025-01-02 18:00:35,877 - agents.StrategyAgent - INFO - 添加对话历史 - user: 下周三
+2025-01-02 18:00:35,877 - agents.StrategyAgent - INFO - 当前对话阶段: collecting_info
+2025-01-02 18:00:38,345 - agents.StrategyAgent - INFO - 缺失信息: 参与者、会议主题或目的
+2025-01-02 18:00:38,345 - agents.StrategyAgent - INFO - 添加对话历史 - assistant: 请告诉我参与者、会议主题或目的
+2025-01-02 18:00:38,345 - __main__ - INFO - 处理完成 - 结果: 请告诉我参与者、会议主题或目的
+2025-01-02 18:00:38,346 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 18:00:38] "POST /api/schedule HTTP/1.1" 200 -
+2025-01-02 18:01:54,658 - __main__ - INFO - 收到新请求 - 消息: 张三和李四，年终总结, 参与者: []
+2025-01-02 18:01:54,659 - agents.StrategyAgent - INFO - 添加对话历史 - user: 张三和李四，年终总结
+2025-01-02 18:01:54,659 - agents.StrategyAgent - INFO - 当前对话阶段: confirming
+2025-01-02 18:01:54,659 - agents.StrategyAgent - INFO - 添加对话历史 - assistant: 请告诉我需要修改的信息。
+2025-01-02 18:01:54,659 - __main__ - INFO - 处理完成 - 结果: 请告诉我需要修改的信息。
+2025-01-02 18:01:54,660 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 18:01:54] "POST /api/schedule HTTP/1.1" 200 -
+2025-01-02 18:02:04,027 - __main__ - INFO - 收到新请求 - 消息: 安排不是修改。, 参与者: []
+2025-01-02 18:02:04,028 - agents.StrategyAgent - INFO - 添加对话历史 - user: 安排不是修改。
+2025-01-02 18:02:04,028 - agents.StrategyAgent - INFO - 当前对话阶段: collecting_info
+2025-01-02 18:02:11,408 - agents.StrategyAgent - ERROR - 检查信息失败: Expecting value: line 1 column 1 (char 0)
+2025-01-02 18:02:11,408 - agents.StrategyAgent - INFO - 缺失信息: 会议的基本信息
+2025-01-02 18:02:11,408 - agents.StrategyAgent - INFO - 添加对话历史 - assistant: 请告诉我会议的基本信息
+2025-01-02 18:02:11,408 - __main__ - INFO - 处理完成 - 结果: 请告诉我会议的基本信息
+2025-01-02 18:02:11,408 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 18:02:11] "POST /api/schedule HTTP/1.1" 200 -
+2025-01-02 18:06:17,094 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/agents.py', reloading
+2025-01-02 18:06:17,215 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 18:06:17,529 - __main__ - INFO - 应用启动
+2025-01-02 18:06:17,548 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 18:06:17,554 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 18:06:48,122 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/agents.py', reloading
+2025-01-02 18:06:48,223 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 18:06:48,579 - __main__ - INFO - 应用启动
+2025-01-02 18:06:48,599 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 18:06:48,610 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 18:07:44,075 - __main__ - INFO - 访问主页
+2025-01-02 18:07:44,081 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 18:07:44] "GET / HTTP/1.1" 200 -
+2025-01-02 18:12:59,514 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/agents.py', reloading
+2025-01-02 18:12:59,664 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 18:13:00,644 - __main__ - INFO - 应用启动
+2025-01-02 18:13:00,673 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 18:13:00,692 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 18:14:56,904 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/app.py', reloading
+2025-01-02 18:14:56,984 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 18:14:57,320 - __main__ - INFO - 应用启动
+2025-01-02 18:14:57,341 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 18:14:57,350 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 18:16:18,799 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/agents.py', reloading
+2025-01-02 18:16:18,855 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 18:16:19,150 - __main__ - INFO - 应用启动
+2025-01-02 18:16:19,172 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 18:16:19,177 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 18:19:04,551 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/agents.py', reloading
+2025-01-02 18:19:04,640 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 18:19:04,952 - __main__ - INFO - 应用启动
+2025-01-02 18:19:04,974 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 18:19:04,979 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-02 18:23:17,276 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/TimelyAI/agents.py', reloading
+2025-01-02 18:23:17,349 - werkzeug - INFO -  * Restarting with stat
