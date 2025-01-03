@@ -1,93 +1,173 @@
-# Timely.AI
+以下是将你提供的所有内容完整转为 Markdown 格式的 `README.md` 文件：
 
+```markdown
+# AI 会议邀约助手
 
+该项目是一个基于 OpenAI GPT-4 的 AI 助手，用于自动化会议邀约、时间协调、策略分析和通知功能。通过多轮对话、日历时间协调和逻辑分析，旨在提升会议安排的效率和准确性。
 
-## Getting started
+## 主要功能
+1. **用户主动发起对话**：帮助用户安排、修改或查询会议内容。
+2. **时间协调**：通过与参与者的多轮对话，协调出所有与会者的可用时间，并避免冲突。
+3. **策略分析**：分析对话内容并决定是否需要进一步的时间协调，或者直接发送会议通知。
+4. **通知功能**：将最终确认的会议时间、参与者信息等通过通知发送给各方。
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## 项目架构
+该项目包含以下核心组件：
+- **DialogueAgent**：处理用户发起的对话，收集并理解用户需求。
+- **CoordinationAgent**：协调会议时间，通过与参会者多轮对话确认合适的时间。
+- **StrategyAgent**：分析对话总结，决定是否需要进行时间协调或直接发送通知。
+- **NotificationAgent**：根据最终确认的时间，向与会者发送通知。
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+## 技术栈
+- **Python 3.x**
+- **OpenAI GPT-4 API**：用于多轮对话和自然语言处理。
+- **Flask**：提供 Web 服务，用于处理用户请求。
+- **Logging**：记录系统日志，方便排查问题。
+- **Tenacity**：用于实现 API 调用的重试机制。
+- **python-dotenv**：管理环境变量（如 OpenAI API Key）。
 
-## Add your files
+## 安装与配置
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+### 1. 克隆项目
+首先，克隆该项目到本地：
+
+```bash
+git clone https://github.com/your-repository/meeting-invite-assistant.git
+cd meeting-invite-assistant
+```
+
+### 2. 创建虚拟环境并安装依赖
+为了确保项目依赖的隔离，建议使用虚拟环境：
+
+```bash
+python3 -m venv venv
+source venv/bin/activate  # 对于 Windows 使用 `venv\Scripts\activate`
+```
+
+安装依赖：
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. 配置 OpenAI API Key
+为了使用 OpenAI GPT-4 API，你需要提供 OpenAI API 密钥。你可以通过以下两种方式之一配置 API 密钥：
+
+- **方法 1：使用环境变量**
+    1. 创建一个 `.env` 文件，在其中添加 API 密钥：
+    
+        ```bash
+        OPENAI_API_KEY=your_openai_api_key_here
+        ```
+    
+    2. 使用 `python-dotenv` 加载环境变量。
+
+- **方法 2：直接修改代码**
+    - 打开 `agents.py`，将 `openai.api_key` 设置为你的 API 密钥（不推荐在生产环境中使用这种方法）。
+
+### 4. 配置日志目录
+如果日志目录 `logs/` 不存在，系统会自动创建。你可以在日志文件中查看详细的请求和响应信息。
+
+### 5. 启动 Flask 服务
+配置完毕后，可以通过以下命令启动 Flask 服务：
+
+```bash
+python app.py
+```
+
+默认情况下，Flask 会在本地的 5001 端口启动应用。你可以在浏览器中访问 `http://127.0.0.1:5001/` 来查看应用。
+
+## 使用说明
+
+### 1. 启动对话
+用户可以通过向 `/chat` 端点发送请求，启动或继续一个对话。以下是一个发送 POST 请求的示例：
+
+```bash
+POST /chat
+Content-Type: application/json
+
+{
+    "message": "我想安排一个会议，讨论项目进展。",
+    "type": "user_initiated"
+}
+```
+
+### 2. 结束对话
+当用户提供的所有信息都已经收集完毕时，`/end_dialogue` 端点用于获取对话总结：
+
+```bash
+POST /end_dialogue
+Content-Type: application/json
+
+{
+    "type": "user_initiated"
+}
+```
+
+### 3. 时间协调
+如果需要协调与会者的时间，系统会根据策略分析决定是否需要时间协调。协调流程通过 `/chat` 端点继续进行。
+
+```bash
+POST /chat
+Content-Type: application/json
+
+{
+    "message": "我今天下午2点到3点有空，能否安排在这个时间?",
+    "type": "coordination"
+}
+```
+
+### 4. 获取总结
+你可以通过 `/end_dialogue` 获取完整的对话总结，或者时间协调的总结：
+
+```bash
+POST /end_dialogue
+Content-Type: application/json
+
+{
+    "type": "coordination"
+}
+```
+
+## 项目结构
 
 ```
-cd existing_repo
-git remote add origin https://jihulab.com/ai6444601/Timely.AI.git
-git branch -M main
-git push -uf origin main
+.
+├── app.py                   # Flask Web 服务
+├── agents.py                # 代理类定义：处理对话、时间协调、策略分析等
+├── requirements.txt         # 项目依赖
+├── .env                     # 环境变量文件 (存储 API Key)
+├── logs/                    # 存放日志文件
+└── templates/
+    └── chat.html            # 前端界面模板
 ```
 
-## Integrate with your tools
+## 开发建议
 
-- [ ] [Set up project integrations](https://jihulab.com/ai6444601/Timely.AI/-/settings/integrations)
+1. **API Key 安全性**：确保 API 密钥不被硬编码在源代码中，使用环境变量或配置文件来管理。
+2. **错误处理与日志**：完善异常处理，使用日志记录系统的运行状态，便于开发和运维人员调试。
+3. **多语言支持**：考虑将对话助手扩展为多语言支持，使用适当的本地化和国际化方法。
+4. **性能优化**：如果需要处理大量并发请求，可以考虑使用生产环境的 WSGI 服务器（如 Gunicorn）和负载均衡。
 
-## Collaborate with your team
+## 常见问题
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+### 1. 如何修改会议的时间？
+用户可以通过继续对话的方式与 AI 进行时间协调。AI 会根据用户提供的时间建议与其他参与者进行对接，最终确定一个合适的时间。
 
-## Test and Deploy
+### 2. 如何确保会议参与者的时间不会冲突？
+通过多轮对话与每个参与者协调时间，系统会根据参与者的日历信息自动进行时间冲突检测。
 
-Use the built-in continuous integration in GitLab.
+### 3. 系统支持多少个参与者？
+目前系统支持任意数量的参与者，协调时间时会逐一与参与者确认时间，并避免冲突。
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+## 贡献
+欢迎提交问题（Issues）和拉取请求（Pull Requests），我们非常欢迎任何关于改进系统的建议和贡献。
 
 ## License
-For open source projects, say how it is licensed.
+本项目使用 MIT 许可证。详细信息请查看 [LICENSE](LICENSE) 文件。
+
+```
+
 
 ## Project status
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
