@@ -2,7 +2,11 @@ import openai
 import json
 import logging
 
-openai.api_key = "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"
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # 加载环境变量
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 class BaseAgent:
     def __init__(self, name):
