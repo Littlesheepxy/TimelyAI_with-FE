@@ -1,1 +1,6 @@
+# 忽略 node_modules 文件夹
 node_modules/
+
+# 忽略 .cache 文件夹
+frontend/node_modules/.cache/
+
