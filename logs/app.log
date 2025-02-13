@@ -63,3 +63,349 @@
 2025-01-02 21:12:17,619 - werkzeug - INFO -  * Restarting with stat
 2025-01-02 21:12:21,682 - werkzeug - WARNING -  * Debugger is active!
 2025-01-02 21:12:21,731 - werkzeug - INFO -  * Debugger PIN: 653-864-938
+2025-01-23 12:37:34,649 - werkzeug - INFO -  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+2025-01-23 12:37:34,650 - werkzeug - INFO -  * Restarting with stat
+2025-01-23 12:37:34,831 - werkzeug - WARNING -  * Debugger is active!
+2025-01-23 12:37:34,838 - werkzeug - INFO -  * Debugger PIN: 827-108-499
+2025-01-23 12:37:49,890 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 12:37:49] "GET / HTTP/1.1" 200 -
+2025-01-23 12:42:14,501 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/db.py', reloading
+2025-01-23 12:42:14,554 - werkzeug - INFO -  * Restarting with stat
+2025-01-23 12:42:14,884 - werkzeug - WARNING -  * Debugger is active!
+2025-01-23 12:42:14,892 - werkzeug - INFO -  * Debugger PIN: 827-108-499
+2025-01-23 12:47:19,982 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/db.py', reloading
+2025-01-23 12:47:20,042 - werkzeug - INFO -  * Restarting with stat
+2025-01-23 12:47:20,355 - werkzeug - WARNING -  * Debugger is active!
+2025-01-23 12:47:20,361 - werkzeug - INFO -  * Debugger PIN: 827-108-499
+2025-01-23 12:48:07,933 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/db.py', reloading
+2025-01-23 12:48:07,973 - werkzeug - INFO -  * Restarting with stat
+2025-01-23 12:48:08,231 - werkzeug - WARNING -  * Debugger is active!
+2025-01-23 12:48:08,236 - werkzeug - INFO -  * Debugger PIN: 827-108-499
+2025-01-23 12:48:13,165 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 12:48:13] "GET / HTTP/1.1" 200 -
+2025-01-23 12:50:22,434 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 12:50:22] "GET / HTTP/1.1" 200 -
+2025-01-23 12:51:21,959 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 12:51:21] "GET / HTTP/1.1" 200 -
+2025-01-23 12:54:17,920 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 12:54:17] "GET / HTTP/1.1" 200 -
+2025-01-23 12:54:19,806 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 12:54:19] "GET /api/mock/conversation/user1 HTTP/1.1" 200 -
+2025-01-23 12:54:20,784 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 12:54:20] "GET /api/mock/conversation/user2 HTTP/1.1" 200 -
+2025-01-23 12:54:21,502 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 12:54:21] "GET /api/mock/conversation/user3 HTTP/1.1" 200 -
+2025-01-23 12:54:23,040 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 12:54:23] "GET /api/mock/conversation/user1 HTTP/1.1" 200 -
+2025-01-23 12:54:25,041 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 12:54:25] "GET /api/mock/conversation/user2 HTTP/1.1" 200 -
+2025-01-23 12:54:25,884 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 12:54:25] "GET /api/mock/conversation/user3 HTTP/1.1" 200 -
+2025-01-23 12:56:07,236 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/app.py', reloading
+2025-01-23 12:56:07,304 - werkzeug - INFO -  * Restarting with stat
+2025-01-23 12:56:07,587 - werkzeug - WARNING -  * Debugger is active!
+2025-01-23 12:56:07,596 - werkzeug - INFO -  * Debugger PIN: 827-108-499
+2025-01-23 12:56:08,469 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 12:56:08] "GET / HTTP/1.1" 200 -
+2025-01-23 12:56:09,927 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 12:56:09] "GET / HTTP/1.1" 200 -
+2025-01-23 12:56:12,719 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 12:56:12] "GET /api/mock/conversation/user1 HTTP/1.1" 200 -
+2025-01-23 12:56:13,446 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 12:56:13] "GET /api/mock/conversation/user2 HTTP/1.1" 200 -
+2025-01-23 12:56:14,047 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 12:56:14] "GET /api/mock/conversation/user3 HTTP/1.1" 200 -
+2025-01-23 12:56:23,053 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 12:56:23] "GET / HTTP/1.1" 200 -
+2025-01-23 12:57:46,301 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/app.py', reloading
+2025-01-23 12:57:46,345 - werkzeug - INFO -  * Restarting with stat
+2025-01-23 12:57:46,588 - werkzeug - WARNING -  * Debugger is active!
+2025-01-23 12:57:46,593 - werkzeug - INFO -  * Debugger PIN: 827-108-499
+2025-01-23 12:59:17,637 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 12:59:17] "GET / HTTP/1.1" 200 -
+2025-01-23 13:03:48,709 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/app.py', reloading
+2025-01-23 13:03:48,772 - werkzeug - INFO -  * Restarting with stat
+2025-01-23 13:03:49,099 - werkzeug - WARNING -  * Debugger is active!
+2025-01-23 13:03:49,105 - werkzeug - INFO -  * Debugger PIN: 827-108-499
+2025-01-23 13:05:57,655 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 13:05:57] "GET / HTTP/1.1" 200 -
+2025-01-23 13:06:54,341 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 13:06:54] "GET / HTTP/1.1" 200 -
+2025-01-23 13:19:37,021 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/agents.py', reloading
+2025-01-23 13:19:37,282 - werkzeug - INFO -  * Restarting with stat
+2025-01-23 13:19:37,647 - werkzeug - WARNING -  * Debugger is active!
+2025-01-23 13:19:37,652 - werkzeug - INFO -  * Debugger PIN: 827-108-499
+2025-01-23 13:22:54,904 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/agents.py', reloading
+2025-01-23 13:22:54,968 - werkzeug - INFO -  * Restarting with stat
+2025-01-23 13:25:11,486 - werkzeug - INFO -  * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+2025-01-23 13:25:11,487 - werkzeug - INFO -  * Restarting with stat
+2025-01-23 13:25:11,651 - werkzeug - WARNING -  * Debugger is active!
+2025-01-23 13:25:11,657 - werkzeug - INFO -  * Debugger PIN: 827-108-499
+2025-01-23 13:25:21,999 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 13:25:21] "GET / HTTP/1.1" 200 -
+2025-01-23 13:25:40,941 - agents.对话助手 - INFO - 添加对话历史 - user: 协调张三和王五下周五开会
+2025-01-23 13:25:42,184 - openai - INFO - error_code=invalid_api_key error_message='Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2025-01-23 13:25:42,184 - agents.对话助手 - ERROR - 处理用户请求失败: Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.
+2025-01-23 13:25:42,184 - __main__ - ERROR - 处理请求失败: Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.
+Traceback (most recent call last):
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/app.py", line 73, in chat
+    response = dialogue_agent.handle_user_request(user_input)
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/agents.py", line 107, in handle_user_request
+    response = openai.ChatCompletion.create(
+        model="gpt-4",
+    ...<14 lines>...
+        ]
+    )
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+                           ~~~~~~~~~~~~~~~~~^
+        "post",
+        ^^^^^^^
+    ...<5 lines>...
+        request_timeout=request_timeout,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_requestor.py", line 226, in request
+    resp, got_stream = self._interpret_response(result, stream)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_requestor.py", line 619, in _interpret_response
+    self._interpret_response_line(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        result.content.decode("utf-8"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        stream=False,
+        ^^^^^^^^^^^^^
+    ),
+    ^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_requestor.py", line 679, in _interpret_response_line
+    raise self.handle_error_response(
+        rbody, rcode, resp.data, rheaders, stream_error=stream_error
+    )
+openai.error.AuthenticationError: Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.
+2025-01-23 13:25:42,195 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 13:25:42] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2025-01-23 13:27:03,806 - agents.对话助手 - INFO - 添加对话历史 - user: 协调张三和王五下周五开会
+2025-01-23 13:27:05,003 - openai - INFO - error_code=invalid_api_key error_message='Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2025-01-23 13:27:05,003 - agents.对话助手 - ERROR - 处理用户请求失败: Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.
+2025-01-23 13:27:05,003 - __main__ - ERROR - 处理请求失败: Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.
+Traceback (most recent call last):
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/app.py", line 73, in chat
+    response = dialogue_agent.handle_user_request(user_input)
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/agents.py", line 107, in handle_user_request
+    response = openai.ChatCompletion.create(
+        model="gpt-4",
+    ...<14 lines>...
+        ]
+    )
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+                           ~~~~~~~~~~~~~~~~~^
+        "post",
+        ^^^^^^^
+    ...<5 lines>...
+        request_timeout=request_timeout,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_requestor.py", line 226, in request
+    resp, got_stream = self._interpret_response(result, stream)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_requestor.py", line 619, in _interpret_response
+    self._interpret_response_line(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        result.content.decode("utf-8"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        stream=False,
+        ^^^^^^^^^^^^^
+    ),
+    ^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_requestor.py", line 679, in _interpret_response_line
+    raise self.handle_error_response(
+        rbody, rcode, resp.data, rheaders, stream_error=stream_error
+    )
+openai.error.AuthenticationError: Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.
+2025-01-23 13:27:05,007 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 13:27:05] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2025-01-23 13:31:16,778 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 13:31:16] "GET / HTTP/1.1" 200 -
+2025-01-23 13:31:28,792 - agents.对话助手 - INFO - 添加对话历史 - user: 安排张三和王五周五的会议
+2025-01-23 13:31:34,853 - openai - INFO - error_code=invalid_api_key error_message='Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2025-01-23 13:31:34,854 - agents.对话助手 - ERROR - 处理用户请求失败: Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.
+2025-01-23 13:31:34,854 - __main__ - ERROR - 处理请求失败: Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.
+Traceback (most recent call last):
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/app.py", line 73, in chat
+    response = dialogue_agent.handle_user_request(user_input)
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/agents.py", line 107, in handle_user_request
+    response = openai.ChatCompletion.create(
+        model="gpt-4",
+    ...<14 lines>...
+        ]
+    )
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+                           ~~~~~~~~~~~~~~~~~^
+        "post",
+        ^^^^^^^
+    ...<5 lines>...
+        request_timeout=request_timeout,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_requestor.py", line 226, in request
+    resp, got_stream = self._interpret_response(result, stream)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_requestor.py", line 619, in _interpret_response
+    self._interpret_response_line(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        result.content.decode("utf-8"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        stream=False,
+        ^^^^^^^^^^^^^
+    ),
+    ^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_requestor.py", line 679, in _interpret_response_line
+    raise self.handle_error_response(
+        rbody, rcode, resp.data, rheaders, stream_error=stream_error
+    )
+openai.error.AuthenticationError: Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.
+2025-01-23 13:31:34,862 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 13:31:34] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2025-01-23 13:32:26,060 - agents.对话助手 - INFO - 添加对话历史 - user: 安排张三和王五周五的会议
+2025-01-23 13:32:26,871 - openai - INFO - error_code=invalid_api_key error_message='Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2025-01-23 13:32:26,871 - agents.对话助手 - ERROR - 处理用户请求失败: Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.
+2025-01-23 13:32:26,871 - __main__ - ERROR - 处理请求失败: Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.
+Traceback (most recent call last):
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/app.py", line 73, in chat
+    response = dialogue_agent.handle_user_request(user_input)
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/agents.py", line 107, in handle_user_request
+    response = openai.ChatCompletion.create(
+        model="gpt-4",
+    ...<14 lines>...
+        ]
+    )
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+                           ~~~~~~~~~~~~~~~~~^
+        "post",
+        ^^^^^^^
+    ...<5 lines>...
+        request_timeout=request_timeout,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_requestor.py", line 226, in request
+    resp, got_stream = self._interpret_response(result, stream)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_requestor.py", line 619, in _interpret_response
+    self._interpret_response_line(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        result.content.decode("utf-8"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        stream=False,
+        ^^^^^^^^^^^^^
+    ),
+    ^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_requestor.py", line 679, in _interpret_response_line
+    raise self.handle_error_response(
+        rbody, rcode, resp.data, rheaders, stream_error=stream_error
+    )
+openai.error.AuthenticationError: Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.
+2025-01-23 13:32:26,873 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 13:32:26] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2025-01-23 13:33:07,971 - agents.对话助手 - INFO - 添加对话历史 - user: 安排张三和王五周五的会议
+2025-01-23 13:33:08,993 - openai - INFO - error_code=invalid_api_key error_message='Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2025-01-23 13:33:08,993 - agents.对话助手 - ERROR - 处理用户请求失败: Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.
+2025-01-23 13:33:08,993 - __main__ - ERROR - 处理请求失败: Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.
+Traceback (most recent call last):
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/app.py", line 73, in chat
+    response = dialogue_agent.handle_user_request(user_input)
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/agents.py", line 107, in handle_user_request
+    response = openai.ChatCompletion.create(
+        model="gpt-4",
+    ...<14 lines>...
+        ]
+    )
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+                           ~~~~~~~~~~~~~~~~~^
+        "post",
+        ^^^^^^^
+    ...<5 lines>...
+        request_timeout=request_timeout,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_requestor.py", line 226, in request
+    resp, got_stream = self._interpret_response(result, stream)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_requestor.py", line 619, in _interpret_response
+    self._interpret_response_line(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        result.content.decode("utf-8"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        stream=False,
+        ^^^^^^^^^^^^^
+    ),
+    ^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_requestor.py", line 679, in _interpret_response_line
+    raise self.handle_error_response(
+        rbody, rcode, resp.data, rheaders, stream_error=stream_error
+    )
+openai.error.AuthenticationError: Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.
+2025-01-23 13:33:08,996 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 13:33:08] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2025-01-23 13:35:10,570 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/app.py', reloading
+2025-01-23 13:35:10,632 - werkzeug - INFO -  * Restarting with stat
+2025-01-23 13:35:10,963 - werkzeug - WARNING -  * Debugger is active!
+2025-01-23 13:35:10,968 - werkzeug - INFO -  * Debugger PIN: 827-108-499
+2025-01-23 13:35:55,284 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 13:35:55] "GET / HTTP/1.1" 200 -
+2025-01-23 13:36:05,236 - agents.对话助手 - INFO - 添加对话历史 - user: 安排张三和王五周五的会议
+2025-01-23 13:36:06,523 - openai - INFO - error_code=invalid_api_key error_message='Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2025-01-23 13:36:06,523 - agents.对话助手 - ERROR - OpenAI API call failed: Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.
+2025-01-23 13:36:06,524 - agents.对话助手 - ERROR - 处理用户请求失败: Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.
+2025-01-23 13:36:06,524 - __main__ - ERROR - 处理请求失败: Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.
+Traceback (most recent call last):
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/app.py", line 74, in chat
+    response = dialogue_agent.handle_user_request(user_input)
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/agents.py", line 141, in handle_user_request
+    assistant_response = self.call_openai_api(messages)
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/agents.py", line 95, in call_openai_api
+    response = openai.ChatCompletion.create(
+        model=model,
+        messages=messages
+    )
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+                           ~~~~~~~~~~~~~~~~~^
+        "post",
+        ^^^^^^^
+    ...<5 lines>...
+        request_timeout=request_timeout,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_requestor.py", line 226, in request
+    resp, got_stream = self._interpret_response(result, stream)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_requestor.py", line 619, in _interpret_response
+    self._interpret_response_line(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        result.content.decode("utf-8"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        stream=False,
+        ^^^^^^^^^^^^^
+    ),
+    ^
+  File "/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/venv/lib/python3.13/site-packages/openai/api_requestor.py", line 679, in _interpret_response_line
+    raise self.handle_error_response(
+        rbody, rcode, resp.data, rheaders, stream_error=stream_error
+    )
+openai.error.AuthenticationError: Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.
+2025-01-23 13:36:06,533 - werkzeug - INFO - 127.0.0.1 - - [23/Jan/2025 13:36:06] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2025-01-23 13:37:17,019 - werkzeug - INFO -  * Detected change in '/Users/xiaoyang/Desktop/产品研发相关/TimelyAI_副本/agents.py', reloading
+2025-01-23 13:37:17,062 - werkzeug - INFO -  * Restarting with stat
+2025-01-23 13:42:34,090 - werkzeug - INFO -  * Restarting with stat
+2025-01-23 13:49:36,331 - werkzeug - INFO -  * Restarting with stat
+2025-01-23 13:51:39,675 - werkzeug - INFO -  * Restarting with stat
+2025-01-23 13:53:56,756 - werkzeug - INFO -  * Restarting with stat
+2025-01-23 13:56:12,255 - werkzeug - INFO -  * Restarting with stat
+2025-01-23 14:03:05,379 - werkzeug - INFO -  * Restarting with stat
+2025-01-23 14:33:31,698 - werkzeug - INFO -  * Restarting with stat

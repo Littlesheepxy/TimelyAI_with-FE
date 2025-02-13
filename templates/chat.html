@@ -6,17 +6,29 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
+            margin: 0;
             padding: 20px;
             background-color: #f5f5f5;
         }
+        
+        .main-container {
+            display: flex;
+            max-width: 1400px;  /* 增加最大宽度 */
+            margin: 0 auto;
+            gap: 20px;
+            height: 100vh;
+            padding: 20px;
+        }
+        
         .chat-container {
+            flex: 1;
+            min-width: 400px;  /* 设置最小宽度 */
             background-color: white;
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
+        
         .chat-messages {
             height: 400px;
             overflow-y: auto;
@@ -29,6 +41,15 @@
             margin: 10px 0;
             padding: 10px;
             border-radius: 5px;
+            position: relative;
+        }
+        .message-content {
+            margin-bottom: 5px;
+        }
+        .message-time {
+            font-size: 12px;
+            color: #666;
+            text-align: right;
         }
         .user-message {
             background-color: #e3f2fd;
@@ -66,17 +87,411 @@
             border-radius: 5px;
         }
         .debug-messages {
-            height: 200px;
-            overflow-y: auto;
             font-family: monospace;
-            background-color: #000;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background-color: #1e1e1e;
             color: #00ff00;
             padding: 10px;
+            border-radius: 5px;
+            height: 200px;
+            overflow-y: auto;
+        }
+        
+        .debug-entry {
+            margin: 5px 0;
+            padding: 5px;
+            border-bottom: 1px solid #333;
+        }
+        
+        .mock-users-section {
+            width: 800px;  /* 增加宽度 */
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .users-and-calendar {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .mock-users-list {
+            width: 200px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        
+        .calendar-panel {
+            flex: 1;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        
+        .mock-chats-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        
+        .mock-chat-box {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+        }
+        
+        .mock-chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: white;
+        }
+        
+        .mock-input-area {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .mock-input-area input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .mock-input-area button {
+            padding: 8px 15px;
+        }
+        
+        .calendar-event {
+            padding: 5px 10px;
+            margin: 2px 0;
+            background-color: #e3f2fd;
+            border-radius: 3px;
             font-size: 12px;
         }
+        
+        .time-slot {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .time-slot:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .system-message {
+            background-color: #fff3cd;
+            color: #856404;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .time-preference {
+            font-size: 12px;
+            color: #2196f3;
+            margin-top: 5px;
+            padding-top: 5px;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        /* 添加活跃用户样式 */
+        .mock-user-item {
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-bottom: 5px;
+        }
+        
+        .mock-user-item:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .mock-user-item.active {
+            background-color: #e6f7ff;
+            border-left: 3px solid #1890ff;
+        }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script>
+        let socket;
+        let activeUserId = null;
+        let selectedMockUser = null;
+        
+        // 初始化 WebSocket 连接
+        function initializeWebSocket() {
+            socket = io();
+            
+            socket.on('connect', () => {
+                addDebugInfo('连接状态', 'WebSocket 连接已建立');
+            });
+            
+            socket.on('message', (data) => {
+                addDebugInfo('收到消息', data);
+                if (data.user_id) {
+                    // 更新模拟用户的聊天框
+                    updateMockUserChat(data.user_id, {
+                        message: data.message,
+                        type: 'received',
+                        time_preference: data.time_preference
+                    });
+                    
+                    // 如果有时间偏好，更新日历
+                    if (data.time_preference) {
+                        updateUserCalendar(data.user_id, data.time_preference);
+                    }
+                } else {
+                    // 更新主聊天框
+                    appendMessage(data.message, 'assistant');
+                }
+            });
+            
+            socket.on('coordination_message', (data) => {
+                addDebugInfo('收到协调消息', data);
+                if (data.target_user_id) {
+                    updateMockUserChat(data.target_user_id, {
+                        message: data.message,
+                        type: 'received'
+                    });
+                }
+            });
+            
+            socket.on('disconnect', () => {
+                addDebugInfo('连接状态', 'WebSocket 连接已断开');
+            });
+
+            socket.on('error', (error) => {
+                addDebugInfo('错误', error);
+                addSystemMessage('连接出现错误，请刷新页面重试');
+            });
+        }
+
+        // 初始化页面
+        document.addEventListener('DOMContentLoaded', function() {
+            const messageInput = document.getElementById('messageInput');
+            
+            initializeWebSocket();
+            initMockUsers();
+            
+            // 添加回车发送事件监听
+            messageInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault(); // 阻止默认的回车换行
+                    sendMessage();
+                }
+            });
+            
+            addDebugInfo('状态', '初始化完成，等待对话');
+        });
+
+        // 修改选择用户函数
+        function selectMockUser(userId) {
+            selectedMockUser = mockUsers.find(u => u.id === userId);
+            activeUserId = userId;  // 设置当前活跃用户
+            
+            // 更新 UI 显示
+            document.querySelectorAll('.mock-user-item').forEach(item => {
+                item.classList.toggle('active', item.dataset.userId === userId);
+            });
+            
+            // 显示用户日历
+            displayUserCalendar(userId);
+        }
+
+        // 发送模拟用户回复
+        function sendMockUserResponse(userId) {
+            const input = document.getElementById(`input-${userId}`);
+            const message = input.value.trim();
+            if (!message) return;
+            
+            // 显示消息在聊天框中
+            updateMockUserChat(userId, {
+                message: message,
+                type: 'sent'
+            });
+            
+            // 通过 WebSocket 发送消息
+            socket.emit('mock_user_message', {
+                user_id: userId,
+                message: message
+            });
+            
+            // 清空输入框
+            input.value = '';
+        }
+
+        // 显示模拟用户的对话
+        function displayMockUserChat(userId, messages) {
+            const chatArea = document.getElementById(`messages-${userId}`);
+            if (!chatArea) {
+                console.error(`找不到用户 ${userId} 的对话区域`);
+                return;
+            }
+            
+            chatArea.innerHTML = messages.map(msg => {
+                const isUser = msg.type === 'user' || msg.user_id === userId;
+                const content = msg.content || msg.message || '';
+                const time = msg.timestamp ? new Date(msg.timestamp).toLocaleTimeString() : '';
+                
+                return `
+                    <div class="message ${isUser ? 'user-message' : 'assistant-message'}">
+                        <div class="message-content">${content}</div>
+                        ${time ? `<div class="message-time">${time}</div>` : ''}
+                    </div>
+                `;
+            }).join('');
+            
+            // 滚动到底部
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }
+
+        function addSystemMessage(message) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message system-message';
+            messageDiv.textContent = message;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // 更新模拟用户的聊天框
+        function updateMockUserChat(userId, data) {
+            const chatBox = document.querySelector(`#messages-${userId}`);
+            if (chatBox) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${data.type === 'sent' ? 'user-message' : 'assistant-message'}`;
+                
+                // 创建消息内容
+                const contentDiv = document.createElement('div');
+                contentDiv.className = 'message-content';
+                contentDiv.textContent = data.message;
+                messageDiv.appendChild(contentDiv);
+                
+                // 添加时间戳
+                const timeDiv = document.createElement('div');
+                timeDiv.className = 'message-time';
+                timeDiv.textContent = new Date().toLocaleTimeString();
+                messageDiv.appendChild(timeDiv);
+                
+                // 如果有时间偏好，添加到消息中
+                if (data.time_preference) {
+                    const preferenceDiv = document.createElement('div');
+                    preferenceDiv.className = 'time-preference';
+                    preferenceDiv.textContent = `确认时间: ${JSON.stringify(data.time_preference)}`;
+                    messageDiv.appendChild(preferenceDiv);
+                }
+                
+                chatBox.appendChild(messageDiv);
+                chatBox.scrollTop = chatBox.scrollHeight;
+                
+                // 添加调试信息
+                addDebugInfo('聊天更新', `${userId} - ${data.type}: ${data.message}`);
+            }
+        }
+
+        // 更新用户日历
+        function updateUserCalendar(userId, timePreference) {
+            if (timePreference) {
+                const user = mockUsers.find(u => u.id === userId);
+                if (user) {
+                    // 添加新的时间安排
+                    user.schedule.push({
+                        start: timePreference.start_time,
+                        end: timePreference.end_time,
+                        title: timePreference.title || "新会议"
+                    });
+                    
+                    // 重新显示日历
+                    displayUserCalendar(userId);
+                }
+            }
+        }
+
+        // 发送主对话框消息
+        function sendMessage() {
+            const messageInput = document.getElementById('messageInput');
+            const message = messageInput.value.trim();
+            
+            if (message) {
+                // 显示用户消息
+                appendMessage(message, 'user');
+                
+                // 通过 WebSocket 发送消息
+                socket.emit('chat_message', {
+                    message: message
+                });
+                
+                // 清空输入框
+                messageInput.value = '';
+                
+                // 添加发送中的提示
+                addSystemMessage('消息发送中...');
+                
+                // 添加调试信息
+                addDebugInfo('发送消息', message);
+            }
+        }
+
+        // 添加消息到主对话框
+        function appendMessage(message, type) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}-message`;
+            
+            // 创建消息内容容器
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'message-content';
+            contentDiv.textContent = message;
+            messageDiv.appendChild(contentDiv);
+            
+            // 添加时间戳
+            const timeDiv = document.createElement('div');
+            timeDiv.className = 'message-time';
+            timeDiv.textContent = new Date().toLocaleTimeString();
+            messageDiv.appendChild(timeDiv);
+            
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // 添加调试信息
+        function addDebugInfo(type, info) {
+            const debugMessages = document.getElementById('debugMessages');
+            const timestamp = new Date().toLocaleTimeString();
+            let formattedInfo = info;
+            
+            // 如果是对象，格式化显示
+            if (typeof info === 'object') {
+                formattedInfo = JSON.stringify(info, null, 2);
+            }
+            
+            const debugEntry = `[${timestamp}] ${type}: ${formattedInfo}\n`;
+            debugMessages.innerHTML += debugEntry;
+            debugMessages.scrollTop = debugMessages.scrollHeight;
+        }
+    </script>
 </head>
 <body>
+    <div class="main-container">
+        <!-- 左侧会议助手对话框 -->
     <div class="chat-container">
         <h1>智能会议助手</h1>
         <div class="chat-messages" id="chatMessages"></div>
@@ -87,6 +502,32 @@
         <div class="debug-panel">
             <h3>调试信息</h3>
             <div class="debug-messages" id="debugMessages"></div>
+            </div>
+        </div>
+
+        <!-- 右侧模拟用户面板 -->
+        <div class="mock-users-section">
+            <!-- 用户列表和日历部分 -->
+            <div class="users-and-calendar">
+                <div class="mock-users-list">
+                    <h3>模拟用户</h3>
+                    <div id="mockUsersList">
+                        <!-- 用户列表由 JS 填充 -->
+                    </div>
+                </div>
+                
+                <div class="calendar-panel">
+                    <h3>用户日程</h3>
+                    <div id="userCalendar">
+                        <!-- 日历内容由 JS 填充 -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 对话框容器 -->
+            <div class="mock-chats-container" id="mockChatsContainer">
+                <!-- 对话框由 JS 动态生成 -->
+            </div>
         </div>
     </div>
 
@@ -103,62 +544,112 @@
             chatMessages.scrollTop = chatMessages.scrollHeight;
         }
 
-        // 添加调试信息显示函数
-        function addDebugMessage(message) {
-            const debugMessages = document.getElementById('debugMessages');
-            const messageDiv = document.createElement('div');
-            messageDiv.textContent = `[${new Date().toISOString()}] ${message}`;
-            debugMessages.appendChild(messageDiv);
-            debugMessages.scrollTop = debugMessages.scrollHeight;
+        // 修改模拟用户数据结构，添加日程
+        const mockUsers = [
+            {
+                id: 'user1',
+                name: '张三',
+                role: '员工',
+                schedule: [
+                    { start: '2024-01-20 09:00', end: '2024-01-20 10:30', title: '部门周会' },
+                    { start: '2024-01-20 14:00', end: '2024-01-20 15:00', title: '项目评审' }
+                ]
+            },
+            {
+                id: 'user2',
+                name: '李四',
+                role: '经理',
+                schedule: [
+                    { start: '2024-01-20 10:00', end: '2024-01-20 11:30', title: '客户会议' },
+                    { start: '2024-01-20 15:00', end: '2024-01-20 16:00', title: '团队会议' }
+                ]
+            },
+            {
+                id: 'user3',
+                name: '王五',
+                role: '部门主管',
+                schedule: [
+                    { start: '2024-01-20 13:00', end: '2024-01-20 14:30', title: '管理层会议' }
+                ]
+            }
+        ];
+        
+        // 初始化用户界面
+        function initMockUsers() {
+            const usersList = document.getElementById('mockUsersList');
+            usersList.innerHTML = mockUsers.map(user => `
+                <div class="mock-user-item" data-user-id="${user.id}" onclick="selectMockUser('${user.id}')">
+                    ${user.name} (${user.role})
+                </div>
+            `).join('');
+            
+            // 初始化所有用户的对话框
+            initMockChats();
+            
+            // 默认选中第一个用户
+            if (mockUsers.length > 0) {
+                selectMockUser(mockUsers[0].id);
+            }
         }
-
-        // 发送消息
-        async function sendMessage() {
-            const message = messageInput.value.trim();
-            if (!message) return;
-
-            // 显示用户消息
-            addMessage(message, true);
-            messageInput.value = '';
-
-            try {
-                addDebugMessage(`发送请求: ${message}`);
-                const response = await fetch('/chat', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        message: message,
-                        type: 'user_initiated'
-                    })
+        
+        // 初始化所有用户的对话框
+        function initMockChats() {
+            const container = document.getElementById('mockChatsContainer');
+            container.innerHTML = mockUsers.map(user => `
+                <div class="mock-chat-box" id="chat-${user.id}">
+                    <div class="mock-chat-header">
+                        ${user.name} (${user.role})
+                    </div>
+                    <div class="mock-chat-messages" id="messages-${user.id}">
+                        <!-- 消息内容 -->
+                    </div>
+                    <div class="mock-input-area">
+                        <input type="text" id="input-${user.id}" placeholder="输入回复...">
+                        <button onclick="sendMockUserResponse('${user.id}')">发送</button>
+                    </div>
+                </div>
+            `).join('');
+            
+            // 为每个输入框添加回车事件
+            mockUsers.forEach(user => {
+                document.getElementById(`input-${user.id}`).addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        sendMockUserResponse(user.id);
+                    }
                 });
-
-                const data = await response.json();
-                addDebugMessage(`收到响应: ${JSON.stringify(data)}`);
-                
-                // 显示助手回复
-                if (data.status === 'success') {
-                    addMessage(data.response, false);
-                } else {
-                    addMessage('抱歉，处理您的请求时出现错误。', false);
-                }
-            } catch (error) {
-                addDebugMessage(`错误: ${error.message}`);
-                console.error('Error:', error);
-                addMessage('抱歉，发生了错误。', false);
-            }
+            });
         }
 
-        // 支持按回车发送消息
-        messageInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                sendMessage();
+        // 显示用户日历
+        function displayUserCalendar(userId) {
+            const user = mockUsers.find(u => u.id === userId);
+            const calendar = document.getElementById('userCalendar');
+            
+            if (!user) {
+                calendar.innerHTML = '<p>请选择用户查看日程</p>';
+                return;
             }
-        });
-
-        // 初始欢迎消息
-        addMessage('你好！我是你的智能会议助手。我可以帮你：\n1. 安排新的会议\n2. 修改已有会议\n3. 查询会议信息\n请告诉我你需要什么帮助？', false);
+            
+            // 生成时间段（示例：9:00-18:00）
+            const timeSlots = [];
+            for (let hour = 9; hour < 18; hour++) {
+                timeSlots.push(`${hour}:00-${hour + 1}:00`);
+            }
+            
+            calendar.innerHTML = `
+                <h4>${user.name}的日程安排</h4>
+                ${timeSlots.map(slot => `
+                    <div class="time-slot">
+                        <span>${slot}</span>
+                        ${user.schedule.some(event => {
+                            const eventStart = new Date(event.start).getHours();
+                            const slotHour = parseInt(slot.split(':')[0]);
+                            return eventStart === slotHour;
+                        }) ? `<span class="calendar-event">已安排</span>` : '<span>空闲</span>'}
+                    </div>
+                `).join('')}
+            `;
+        }
     </script>
 </body>
 </html> 
