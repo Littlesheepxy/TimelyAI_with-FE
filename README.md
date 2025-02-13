@@ -1,6 +1,5 @@
-当然可以！以下是更新后的 `README.md` 内容，专门强调了基于大模型能力（`deepseek` 和 GPT）的 AI 会议安排助手：
 
-```markdown
+
 # Timely.AI
 
 **Timely.AI** 是一个基于大模型能力（`deepseek` 和 GPT）构建的 AI 助手，旨在自动化会议邀约、时间协调、策略分析和通知功能。通过多轮对话、日历时间协调和逻辑分析，Timely.AI 能显著提升会议安排的效率和准确性。
@@ -203,6 +202,5 @@ Content-Type: application/json
 ## 贡献
 欢迎提交问题（Issues）和拉取请求（Pull Requests），我们非常欢迎任何关于改
 
-```
 
 
